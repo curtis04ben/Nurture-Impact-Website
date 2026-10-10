@@ -16,6 +16,9 @@ $canonicalUrl = 'https://www.nurtureimpact.ie/project.php?slug=' . urlencode($sl
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <!-- Keeps relative links working when this page is opened at its pretty
+       URL (/insights/slug or /projects/slug). See ni_base_href(). -->
+  <base href="<?php echo e(ni_base_href()); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700|Great+Vibes:400,100,300,500,700' rel='stylesheet' type='text/css'>
   <title><?php echo e($pageTitle); ?></title>
@@ -33,7 +36,7 @@ $canonicalUrl = 'https://www.nurtureimpact.ie/project.php?slug=' . urlencode($sl
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <?php include __DIR__ . '/includes/partials/nav.php'; ?>
+  <?php $navSkipHref = ($_SERVER['REQUEST_URI'] ?? '') . '#main-content'; include __DIR__ . '/includes/partials/nav.php'; ?>
 
   <main id="main-content">
     <?php if (!$project): ?>

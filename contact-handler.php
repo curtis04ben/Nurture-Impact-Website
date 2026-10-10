@@ -70,10 +70,15 @@ if ($name === '' || $email === '' || $message === '') {
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     ni_contact_respond(false, 'Please enter a valid email address.');
 }
-if (mb_strlen($name) > 200 || mb_strlen($organisation) > 200) {
+// Character count that works whether or not PHP's mbstring extension is
+// installed (some hosts omit it); counts UTF-8 characters, not bytes.
+$charCount = function ($value) {
+    return function_exists('mb_strlen') ? mb_strlen($value) : (int) preg_match_all('/./su', $value);
+};
+if ($charCount($name) > 200 || $charCount($organisation) > 200) {
     ni_contact_respond(false, 'Please shorten your name or organisation name.');
 }
-if (mb_strlen($message) > 8000) {
+if ($charCount($message) > 8000) {
     ni_contact_respond(false, 'Your message is a little too long. Please shorten it and try again.');
 }
 

@@ -125,6 +125,21 @@ function ni_unique_slug($items, $slug, $ignoreSlug = null) {
     }
 }
 
+/**
+ * URL path of the site root, e.g. "/" (or "/subfolder/" if the site is
+ * ever installed below the web root). Used as <base href> on pages that
+ * are also reachable at pretty URLs like /insights/slug, so their
+ * relative links (styles.css, assets/..., index.php) still resolve from
+ * the site root rather than from /insights/.
+ */
+function ni_base_href() {
+    $docRoot = realpath($_SERVER['DOCUMENT_ROOT'] ?? '') ?: '';
+    $siteRoot = realpath(__DIR__ . '/..') ?: '';
+    $relative = ($docRoot !== '' && strpos($siteRoot, $docRoot) === 0) ? substr($siteRoot, strlen($docRoot)) : '';
+    $relative = trim(str_replace('\\', '/', $relative), '/');
+    return '/' . ($relative === '' ? '' : $relative . '/');
+}
+
 /** Basic HTML-escaping shortcut used throughout the templates. */
 function e($value) {
     return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');

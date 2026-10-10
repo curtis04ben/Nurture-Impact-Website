@@ -3,6 +3,9 @@
 // $navContactHref = '#contact' before including this file; everywhere
 // else the Contact link goes to the homepage form.
 $navContactHref = $navContactHref ?? 'index.php#contact';
+// Pages that set a <base href> override this so the skip link stays on
+// the current page instead of resolving against the site root.
+$navSkipHref = $navSkipHref ?? '#main-content';
 ?>
 <!--Beginning of navigation section-->
   <div class="nav-bar">
@@ -22,7 +25,7 @@ $navContactHref = $navContactHref ?? 'index.php#contact';
         <li><a href="about.php">About</a></li>
         <li><a href="<?php echo htmlspecialchars($navContactHref, ENT_QUOTES, 'UTF-8'); ?>">Contact</a></li>
       </ul>
-      <a href="#main-content" class="skip-to-main">skip to main content</a>
+      <a href="<?php echo htmlspecialchars($navSkipHref, ENT_QUOTES, 'UTF-8'); ?>" class="skip-to-main">skip to main content</a>
   </div>
     <div class="navigation">
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle" aria-hidden="true">
