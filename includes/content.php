@@ -1,6 +1,6 @@
 <?php
 /**
- * Nurture Impact — lightweight content store helpers.
+ * Nurture Impact: lightweight content store helpers.
  *
  * Content is stored as JSON files in /data. This keeps the public site
  * simple (no database required) while still letting the /admin area
@@ -8,7 +8,7 @@
  *
  * If the site later outgrows JSON files (very large volumes of content,
  * multiple simultaneous editors), these functions are the only place
- * that would need to change to swap in a MySQL-backed implementation —
+ * that would need to change to swap in a MySQL-backed implementation:
  * everything else (public pages, admin forms) calls through here.
  */
 

@@ -3,6 +3,9 @@ require_once __DIR__ . '/includes/content.php';
 
 $slug = isset($_GET['slug']) ? preg_replace('/[^a-z0-9\-]/', '', strtolower($_GET['slug'])) : '';
 $article = $slug ? ni_get_article_by_slug($slug, true) : null;
+if (!$article) {
+    http_response_code(404);
+}
 
 $pageTitle = $article ? $article['title'] . ' | Nurture Impact' : 'Article Not Found | Nurture Impact';
 $pageDescription = $article ? ($article['excerpt'] ?? '') : 'This article could not be found.';

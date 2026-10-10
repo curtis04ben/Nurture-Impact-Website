@@ -47,7 +47,7 @@ $publishedArticles = count(array_filter($articles, fn($a) => !empty($a['publishe
     <div class="admin-card">
       <h2 class="admin-subtitle">How This Works</h2>
       <p style="color:#555;line-height:1.6;">
-        Articles and Projects are stored as JSON files in <code>/data</code> — there's no database
+        Articles and Projects are stored as JSON files in <code>/data</code>; there's no database
         to manage. Anything marked <strong>Published</strong> appears immediately on the live
         Insights and Projects pages; anything left as a <strong>Draft</strong> stays hidden from
         visitors until you're ready.

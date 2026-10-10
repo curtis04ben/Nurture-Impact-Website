@@ -10,7 +10,7 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700|Great+Vibes:400,100,300,500,700' rel='stylesheet' type='text/css'>
   <title>Nurture Impact | Youth &amp; Community Development Consultancy, Ireland</title>
-  <meta name="description" content="Nurture Impact is a consultancy with over 30 years of experience across Ireland's Youth & Community Development sector — training, governance, funding applications and organisational development.">
+  <meta name="description" content="Nurture Impact is a consultancy with over 30 years of experience across Ireland's Youth & Community Development sector: training, governance, funding applications and organisational development.">
   <link rel="canonical" href="https://www.nurtureimpact.ie/index.php">
   <meta property="og:title" content="Nurture Impact | Youth & Community Development Consultancy">
   <meta property="og:description" content="Over 30 years of experience across the Youth & Community Development sector, including 20 years of specialist experience within Pobal.">
@@ -77,7 +77,7 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1 class="headline__main">Nurture Impact</h1>
-        <h2 class="headline__sub">Consultancy, Training &amp; Practical Support Across the Youth &amp; Community Development Sector</h2>
+        <h2 class="headline__sub">Practical governance, strategy, funding and organisational development support for Ireland’s community, voluntary and social enterprise sectors.</h2>
 
         <!-- Two CTA buttons -->
       <div class="hero__buttons">
@@ -94,16 +94,15 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
         <section class="intro" id="intro">
           <!-- Text Column -->
           <div class="intro__text">
-            <h1 class="intro__headline">Over 30 Years of Experience Across the Youth &amp; Community Development Sector</h1>
+            <h1 class="intro__headline">More Than 30 Years of Experience Across Community Development and the Social Economy</h1>
             <p class="intro__body">
-              Nurture Impact provides consultancy, training and practical support to community groups, social enterprises, Local Development Companies and voluntary boards throughout Ireland — helping organisations build capacity, strengthen governance and secure funding.
+              Nurture Impact helps community organisations, social enterprises, Local Development Companies and voluntary boards strengthen governance, clarify strategy, improve funding readiness and turn plans into practical delivery.
             </p>
             <p class="intro__body">
-              Nurture Impact draws on over 30 years of experience across the Youth &amp; Community Development sector, including 20 years of specialist experience within Pobal — a significant advantage for organisations preparing Pobal funding applications.
+              Nurture Impact draws on more than 30 years of experience in youth and community development, programme management and public-sector delivery, including 20 years managing programmes for Pobal. That experience brings a practical understanding of how funding, appraisal, governance and delivery decisions are made and how organisations can present stronger evidence, clearer plans and more credible applications.
             </p>
             <div class="intro__buttons">
-              <a href="services.html" class="intro__btn">Explore Our Services</a>
-              <a href="grant-applications.html" class="intro__btn intro__btn--secondary">Pobal Funding Applications</a>
+              <a href="grant-applications.html" class="intro__btn">Pobal Funding Applications</a>
             </div>
           </div>
 
@@ -121,54 +120,63 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
         <div class="credential-strip__wrapper">
           <div class="credential-strip__primary">
             <span class="credential-strip__number">30+</span>
-            <span class="credential-strip__label">Years in Youth &amp; Community Development</span>
+            <span class="credential-strip__label">Years of experience across community development, programme management, stakeholder engagement and public-sector delivery</span>
           </div>
           <div class="credential-strip__divider"></div>
           <div class="credential-strip__secondary">
-            <strong>Including 20 years of specialist experience within Pobal</strong> — a deep, first-hand understanding of the funding environment and application process, now applied in service of client organisations across the wider sector.
+            <strong>This includes 20 years of specialist programme-management experience within Pobal</strong>, providing first-hand insight into appraisal, funding requirements, evidence, delivery models and the standards expected of public-funding applicants.
           </div>
         </div>
       </section>
       <!-- End of credential strip -->
+
+      <!-- Starting point CTA -->
+      <section class="start-point" aria-label="Getting started">
+        <p class="start-point__text">Whether you need a focused diagnostic, a facilitated strategy process, an appraisal masterclass or a longer capacity-building programme, the first step is a short conversation about the decision or challenge your organisation is facing. <a href="#contact" class="start-point__link">Get in touch to identify the most practical starting point.</a></p>
+      </section>
 
       <!-- Capabilities overview -->
       <section class="capabilities-section" id="capabilities">
         <div class="capabilities__wrapper">
           <div class="capabilities__intro">
             <h2>How Nurture Impact Can Help</h2>
-            <p>A coherent set of consultancy capabilities built around three decades of sector experience — from first strategy conversations through to funding, governance and delivery.</p>
+            <p>Nurture Impact’s connected service areas help organisations move from evidence and strategic choices through to stronger governance, funding readiness and practical implementation.</p>
           </div>
 
           <div class="capability-grid">
             <div class="capability-card">
-              <span class="capability-card__eyebrow">Sector Experience</span>
-              <h3>Youth &amp; Community Development</h3>
-              <p>Broad, practical experience across community groups, youth projects and Local Development Companies throughout Ireland.</p>
-              <a href="services.html#youth-community" class="capability-card__link">Learn more</a>
+              <span class="capability-card__eyebrow">Organisational Development</span>
+              <h3>Organisational Development</h3>
+              <p>Focused diagnostics, facilitated strategy processes and organisational reviews that turn evidence, consultation and competing priorities into clear decisions, practical delivery models and 90-day action plans.</p>
+              <a href="services.html#organisational-development" class="capability-card__link">Learn more about organisational development</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Learning</span>
               <h3>Training &amp; Workshops</h3>
-              <p>Tailored workshops and training programmes for teams, boards and community groups — practical, not theoretical.</p>
-              <a href="services.html#training" class="capability-card__link">Learn more</a>
+              <p>Practical masterclasses, workshops and multi-session programmes for boards, teams, community organisations and social enterprises, supported by plain-English tools that participants can use immediately.</p>
+              <a href="services.html#training" class="capability-card__link">Learn more about training and workshops</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Oversight</span>
-              <h3>Governance &amp; Board Development</h3>
-              <p>Practical support for boards navigating the Charities Governance Code, compliance and effective oversight.</p>
-              <a href="governance.html" class="capability-card__link">Learn more</a>
+              <h3>Governance, Strategy &amp; Board Development</h3>
+              <p>Plain-English support for boards and leadership teams reviewing governance, clarifying roles, setting strategic priorities, managing risk and turning agreed direction into practical action.</p>
+              <a href="governance.html" class="capability-card__link">Learn more about governance, strategy and board development</a>
+            </div>
+            <div class="capability-card">
+              <span class="capability-card__eyebrow">Funding &amp; Enterprise</span>
+              <h3>Funding, Appraisal &amp; Social Enterprise Support</h3>
+              <p>Assessor-informed masterclasses, funding-readiness reviews, application support and practical social enterprise diagnostics that help organisations test ideas, strengthen evidence and decide whether to stop, refine, pilot or progress.</p>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Specialist Credential</span>
               <h3>Funding &amp; Grant Applications</h3>
-              <p>Particular expertise in Pobal funding applications, drawing on 20 years of experience working within Pobal.</p>
+              <p>Assessor-informed support for funding and grant applications, grounded in 20 years of programme-management experience within Pobal.</p>
               <a href="grant-applications.html" class="capability-card__link">Learn more</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Capacity</span>
               <h3>Organisational Development</h3>
               <p>Support to strengthen organisational structures, systems and long-term sustainability.</p>
-              <a href="services.html#organisational-development" class="capability-card__link">Learn more</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Direction</span>
@@ -179,20 +187,20 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
             <div class="capability-card">
               <span class="capability-card__eyebrow">Growth</span>
               <h3>Capacity Building</h3>
-              <p>Long-term support to build local capacity and resilience, not just one-off assistance.</p>
+              <p>Capacity-building support helps boards, teams and community organisations embed stronger governance, planning, funding readiness and delivery practices over time. It can combine workshops, practical tools, mentoring and implementation reviews so that learning is converted into sustained organisational capability.</p>
               <a href="services.html#capacity-building" class="capability-card__link">Learn more</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Enterprise</span>
               <h3>Social &amp; Community Enterprise Support</h3>
-              <p>Guidance for trading organisations balancing mission and market, including funding routes such as LEADER and Rethink Ireland.</p>
+              <p>Practical support for community organisations and social enterprises testing traded income, refining a paid offer or preparing for growth. Diagnostics and development support examine mission fit, buyer or commissioner demand, pricing, governance readiness, delivery capacity and social-impact evidence, helping organisations decide whether to stop, refine, pilot or progress.</p>
               <a href="services.html#social-enterprise" class="capability-card__link">Learn more</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Tailored</span>
               <h3>Bespoke Consultancy</h3>
-              <p>Nurture Impact works with organisations to identify their specific requirements and develop tailored support.</p>
-              <a href="services.html#bespoke" class="capability-card__link">Learn more</a>
+              <p>Where an organisation’s needs do not fit a standard service, Nurture Impact can shape a proportionate response around the decision, challenge or outcome required. Support may involve a focused diagnostic, facilitated workshop, document review, short consultancy assignment or longer implementation pathway.</p>
+              <a href="services.html#bespoke" class="capability-card__link">Learn more about bespoke consultancy</a>
             </div>
           </div>
         </div>
@@ -211,14 +219,14 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
               Workshops can be delivered as one-off sessions, bespoke training days, or multi-session programmes, and can be tailored to your organisation's specific requirements.
             </p>
             <ul class="training__list">
-              <li>Governance &amp; board development</li>
+              <li>Governance, strategy &amp; board development</li>
               <li>Funding &amp; grant applications</li>
               <li>Organisational development</li>
               <li>Strategic planning</li>
-              <li>Community &amp; youth development</li>
+              <li>Youth &amp; community development</li>
               <li>Team development</li>
             </ul>
-            <a href="services.html#training" class="intro__btn">See Training &amp; Workshops</a>
+            <a href="events-workshops.html" class="intro__btn">See Events &amp; Workshops</a>
           </div>
           <div class="training__gallery">
             <img src="assets/workshop_1.jpg" alt="Team taking part in a Nurture Impact training session">
@@ -243,7 +251,7 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
           </div>
 
           <?php if (empty($latestProjects)): ?>
-            <p class="content-placeholder-note">Project write-ups are being prepared for publication — check back soon, or see <a href="services.html">our services</a> in the meantime.</p>
+            <p class="content-placeholder-note">Project write-ups are being prepared for publication. Check back soon, or see <a href="services.html">our services</a> in the meantime.</p>
           <?php else: ?>
             <div class="card-grid">
               <?php foreach ($latestProjects as $project): ?>
@@ -280,7 +288,7 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
           </div>
 
           <?php if (empty($latestArticles)): ?>
-            <p class="content-placeholder-note">Articles are being prepared for publication — follow Nurture Impact on <a href="https://www.linkedin.com/in/curtisalan?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a> for updates.</p>
+            <p class="content-placeholder-note">Articles are being prepared for publication. Follow Nurture Impact on <a href="https://www.linkedin.com/in/curtisalan?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a> for updates.</p>
           <?php else: ?>
             <div class="card-grid">
               <?php foreach ($latestArticles as $article): ?>
@@ -358,7 +366,7 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
               </div>
               <h3 class="why__card-title">30+ Years Across the Sector</h3>
               <p class="why__card-text">
-                Over three decades of direct experience across Youth &amp; Community Development, including 20 years of specialist experience within Pobal — understanding of community development, social enterprise, and LDC operations.
+                Over three decades of direct experience across Youth &amp; Community Development, including 20 years of specialist experience within Pobal, bringing an understanding of community development, social enterprise and LDC operations.
               </p>
             </div>
 
@@ -446,11 +454,6 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
             </div>
             <p class="why__sector-closing">Our programmes are designed to meet those needs.</p>
           </div>
-
-          <!-- CTA at the bottom -->
-          <div class="why__cta">
-            <a href="#contact" class="why__cta-link">Book a Discovery Call</a>
-          </div>
         </div>
       </section>
     
@@ -492,7 +495,7 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
       <div class="footer__services">
         <h4>Services</h4>
         <ul>
-          <li><a href="governance.html">Governance &amp; Board Development</a></li>
+          <li><a href="governance.html">Governance, Strategy &amp; Board Development</a></li>
           <li><a href="grant-applications.html">Funding &amp; Grant Applications</a></li>
           <li><a href="services.html#training">Training &amp; Workshops</a></li>
           <li><a href="events-workshops.html">Events &amp; Workshops</a></li>

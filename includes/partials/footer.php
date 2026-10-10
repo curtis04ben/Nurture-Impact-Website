@@ -18,7 +18,7 @@
       <div class="footer__services">
         <h4>Services</h4>
         <ul>
-          <li><a href="governance.html">Governance &amp; Board Development</a></li>
+          <li><a href="governance.html">Governance, Strategy &amp; Board Development</a></li>
           <li><a href="grant-applications.html">Funding &amp; Grant Applications</a></li>
           <li><a href="services.html#training">Training &amp; Workshops</a></li>
           <li><a href="events-workshops.html">Events &amp; Workshops</a></li>

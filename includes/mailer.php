@@ -1,6 +1,6 @@
 <?php
 /**
- * Nurture Impact — contact form email delivery.
+ * Nurture Impact: contact form email delivery.
  *
  * Two transports are supported, chosen by the NI_MAIL_TRANSPORT constant
  * (see backend/config.php, which reads it from an environment variable):
@@ -11,8 +11,8 @@
  *
  *   - 'smtp': a small built-in SMTP client (no external library) for
  *     sending via a real mail provider when local mail() delivery isn't
- *     reliable enough (common in some hosting/Docker setups). Configured
- *     entirely through environment variables — see backend/config.php
+ *     reliable enough (common on some hosts or local machines without a mail server). Configured
+ *     entirely through environment variables; see backend/config.php
  *     for the full list. No credentials are ever stored in this file or
  *     committed to the project.
  *
@@ -79,7 +79,7 @@ function ni_mail_header_safe($value) {
 
 /**
  * Send the contact form email using whichever transport is configured.
- * Returns true on (apparent) success, false on failure. Never throws —
+ * Returns true on (apparent) success, false on failure. Never throws;
  * callers should treat a false return as "could not send" and show the
  * visitor a generic message plus the direct contact email as a fallback.
  */
@@ -139,7 +139,7 @@ function ni_send_via_php_mail($toEmail, $subject, $text, $html, $fromEmail, $fro
 
 /**
  * Transport 2: minimal SMTP client (no external library).
- * Configured via environment variables only — see backend/config.php.
+ * Configured via environment variables only; see backend/config.php.
  * This has not been exercised against a live mail server in this
  * project's development environment; test it against your real SMTP
  * provider before relying on it in production (see README).
@@ -165,7 +165,7 @@ function ni_send_via_smtp($toEmail, $subject, $text, $html, $fromEmail, $fromNam
     $errno = 0; $errstr = '';
     $socket = @fsockopen($transportPrefix . $host, $port, $errno, $errstr, 15);
     if (!$socket) {
-        error_log("Nurture Impact: SMTP connection failed — {$errstr} ({$errno})");
+        error_log("Nurture Impact: SMTP connection failed: {$errstr} ({$errno})");
         return false;
     }
     stream_set_timeout($socket, 15);

@@ -1,6 +1,6 @@
 <?php
 /**
- * Nurture Impact — contact form handler.
+ * Nurture Impact: contact form handler.
  *
  * Receives POSTs from every contact form on the site (see assets/js/contact-form.js).
  * Responds with JSON {success, message} for the normal (JavaScript) path.
@@ -11,7 +11,7 @@
 
 require_once __DIR__ . '/includes/mailer.php';
 
-// Never leak PHP errors/warnings to the response — this endpoint always
+// Never leak PHP errors/warnings to the response; this endpoint always
 // returns a controlled JSON or redirect response.
 error_reporting(E_ALL);
 ini_set('display_errors', '0');
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 if (!empty($_POST['contact_number'])) {
     // Respond as if it succeeded so automated spam scripts get no signal
     // that they were filtered, without actually sending anything.
-    ni_contact_respond(true, "Thanks — your message has been sent. We'll be in touch soon.");
+    ni_contact_respond(true, "Thanks, your message has been sent. We'll be in touch soon.");
 }
 
 $name = trim((string) ($_POST['from_name'] ?? ''));
@@ -74,7 +74,7 @@ if (mb_strlen($name) > 200 || mb_strlen($organisation) > 200) {
     ni_contact_respond(false, 'Please shorten your name or organisation name.');
 }
 if (mb_strlen($message) > 8000) {
-    ni_contact_respond(false, 'Your message is a little too long — please shorten it and try again.');
+    ni_contact_respond(false, 'Your message is a little too long. Please shorten it and try again.');
 }
 
 $fields = [
@@ -94,7 +94,7 @@ try {
 }
 
 if ($sent) {
-    ni_contact_respond(true, "Thanks, {$name} — your message has been sent. We'll be in touch soon.");
+    ni_contact_respond(true, "Thanks, {$name}, your message has been sent. We'll be in touch soon.");
 }
 
 ni_contact_respond(false, 'Sorry, something went wrong sending your message. Please email info@nurtureimpact.ie directly in the meantime.');

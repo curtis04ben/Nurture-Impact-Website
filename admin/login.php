@@ -17,7 +17,7 @@ $justCreated = isset($_GET['created']);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lightweight brute-force throttle: a growing delay after each failed
     // attempt (session-based, resets on success). Not a full lockout
-    // system — just enough friction to make guessing impractical without
+    // system, just enough friction to make guessing impractical without
     // adding extra persistent storage for the simple admin area.
     $attempts = $_SESSION['ni_login_attempts'] ?? 0;
     if ($attempts > 0) {
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <h1 class="admin-title">Admin Login</h1>
 
       <?php if ($justCreated): ?>
-        <div class="admin-flash admin-flash--success">Admin account created — please sign in.</div>
+        <div class="admin-flash admin-flash--success">Admin account created. Please sign in.</div>
       <?php endif; ?>
       <?php if ($error): ?>
         <div class="admin-flash admin-flash--error"><?php echo e($error); ?></div>

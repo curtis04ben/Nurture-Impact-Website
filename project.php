@@ -3,6 +3,9 @@ require_once __DIR__ . '/includes/content.php';
 
 $slug = isset($_GET['slug']) ? preg_replace('/[^a-z0-9\-]/', '', strtolower($_GET['slug'])) : '';
 $project = $slug ? ni_get_project_by_slug($slug, true) : null;
+if (!$project) {
+    http_response_code(404);
+}
 
 $pageTitle = $project ? $project['title'] . ' | Nurture Impact' : 'Project Not Found | Nurture Impact';
 $pageDescription = $project ? ($project['summary'] ?? '') : 'This project could not be found.';
@@ -74,7 +77,7 @@ $canonicalUrl = 'https://www.nurtureimpact.ie/project.php?slug=' . urlencode($sl
       <?php if (!empty($project['gallery']) && is_array($project['gallery'])): ?>
         <div class="article-gallery">
           <?php foreach ($project['gallery'] as $img): ?>
-            <img src="<?php echo e($img); ?>" alt="<?php echo e($project['title']); ?> — gallery image">
+            <img src="<?php echo e($img); ?>" alt="<?php echo e($project['title']); ?> gallery image">
           <?php endforeach; ?>
         </div>
       <?php endif; ?>

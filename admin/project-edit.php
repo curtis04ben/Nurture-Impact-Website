@@ -10,7 +10,7 @@ $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!ni_csrf_check()) {
-        $error = 'Your session expired — please try saving again.';
+        $error = 'Your session expired. Please try saving again.';
     } else {
         $title = trim($_POST['title'] ?? '');
         $date = trim($_POST['date'] ?? '');
@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     header('Location: projects.php?saved=1');
                     exit;
                 }
-                $error = 'Could not save — check that /data is writable by the web server.';
+                $error = 'Could not save. Check that /data is writable by the web server.';
             }
         }
     }
