@@ -27,49 +27,7 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
 </head>
 
 <body>
-  <!--Beginning of navigation section-->
-  <div class="nav-bar">
-      <!-- Logo + Title together on the left -->
-      <div class="nav-bar__left">
-          <a href="index.php" class="nav-bar-brand">
-              <img src="assets/main_img.png" alt="Nurture Impact Logo" class="nav-bar-brand__img">
-          </a>
-          <div class="nav-bar__title">
-              <h1>Nurture Impact</h1>
-          </div>
-      </div>
-
-      <!-- Desktop navigation links -->
-      <ul class="nav-bar__links">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.php">Projects</a></li>
-        <li><a href="insights.php">Insights</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <!-- Skip link (hidden until focused) -->
-      <a href="#intro" class="skip-to-main">skip to main content</a>
-  </div>
-    <div class="navigation">
-      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" aria-hidden="true">
-      <label for="navi-toggle" class="navigation__button">
-        <span class="navigation__icon">&nbsp;</span>
-      </label>
-      <div class="navigation__background">&nbsp;</div>
-      <nav class="navigation__nav">
-        <ul class="navigation__list">        
-          <li class="navigation__item"><a href="index.php" class="navigation__link">HOME</a></li>
-          <li class="navigation__item"><a href="services.html" class="navigation__link">SERVICES</a></li>
-          <li class="navigation__item"><a href="projects.php" class="navigation__link">PROJECTS</a></li>
-          <li class="navigation__item"><a href="insights.php" class="navigation__link">INSIGHTS</a></li>
-          <li class="navigation__item"><a href="about.html" class="navigation__link">ABOUT</a></li>
-          <li class="navigation__item"><a href="#contact" class="navigation__link">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
-    <!--End of navigation section-->
+  <?php $navContactHref = '#contact'; include __DIR__ . '/includes/partials/nav.php'; ?>
 
     <!-- Beginning of header section -->
     <div class="headline__image"></div>
@@ -81,20 +39,20 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
 
         <!-- Two CTA buttons -->
       <div class="hero__buttons">
-        <a href="services.html" class="btn--primary btn">OUR SERVICES</a>
+        <a href="services.php" class="btn--primary btn">OUR SERVICES</a>
         <a href="#contact" class="btn--secondary btn">GET IN TOUCH</a>
       </div>
       </div>
     </header>
       <!-- End of header section -->
 
-    <main>
+    <main id="main-content">
       <!-- Intro text section (including image on medium and large screens) -->
       <div class="intro__wrapper">
         <section class="intro" id="intro">
           <!-- Text Column -->
           <div class="intro__text">
-            <h1 class="intro__headline">More Than 30 Years of Experience Across Community Development and the Social Economy</h1>
+            <h2 class="intro__headline">More Than 30 Years of Experience Across Community Development and the Social Economy</h2>
             <p class="intro__body">
               Nurture Impact helps community organisations, social enterprises, Local Development Companies and voluntary boards strengthen governance, clarify strategy, improve funding readiness and turn plans into practical delivery.
             </p>
@@ -102,13 +60,13 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
               Nurture Impact draws on more than 30 years of experience in youth and community development, programme management and public-sector delivery, including 20 years managing programmes for Pobal. That experience brings a practical understanding of how funding, appraisal, governance and delivery decisions are made and how organisations can present stronger evidence, clearer plans and more credible applications.
             </p>
             <div class="intro__buttons">
-              <a href="grant-applications.html" class="intro__btn">Pobal Funding Applications</a>
+              <a href="grant-applications.php" class="intro__btn">Pobal Funding Applications</a>
             </div>
           </div>
 
           <!-- Image Column -->
           <div class="intro__image-container">
-            <img src="assets/community_training.png" alt="Participants taking part in a community development session" class="intro__image">
+            <img src="assets/community_training.jpg" alt="Participants taking part in a community development session" class="intro__image">
           </div>
         </section>
       </div>
@@ -145,62 +103,52 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
 
           <div class="capability-grid">
             <div class="capability-card">
-              <span class="capability-card__eyebrow">Organisational Development</span>
+              <span class="capability-card__eyebrow">Capacity</span>
               <h3>Organisational Development</h3>
               <p>Focused diagnostics, facilitated strategy processes and organisational reviews that turn evidence, consultation and competing priorities into clear decisions, practical delivery models and 90-day action plans.</p>
-              <a href="services.html#organisational-development" class="capability-card__link">Learn more about organisational development</a>
+              <a href="services.php#organisational-development" class="capability-card__link">Learn more about organisational development</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Learning</span>
               <h3>Training &amp; Workshops</h3>
               <p>Practical masterclasses, workshops and multi-session programmes for boards, teams, community organisations and social enterprises, supported by plain-English tools that participants can use immediately.</p>
-              <a href="services.html#training" class="capability-card__link">Learn more about training and workshops</a>
+              <a href="services.php#training" class="capability-card__link">Learn more about training and workshops</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Oversight</span>
               <h3>Governance, Strategy &amp; Board Development</h3>
               <p>Plain-English support for boards and leadership teams reviewing governance, clarifying roles, setting strategic priorities, managing risk and turning agreed direction into practical action.</p>
-              <a href="governance.html" class="capability-card__link">Learn more about governance, strategy and board development</a>
-            </div>
-            <div class="capability-card">
-              <span class="capability-card__eyebrow">Funding &amp; Enterprise</span>
-              <h3>Funding, Appraisal &amp; Social Enterprise Support</h3>
-              <p>Assessor-informed masterclasses, funding-readiness reviews, application support and practical social enterprise diagnostics that help organisations test ideas, strengthen evidence and decide whether to stop, refine, pilot or progress.</p>
+              <a href="governance.php" class="capability-card__link">Learn more about governance, strategy and board development</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Specialist Credential</span>
               <h3>Funding &amp; Grant Applications</h3>
-              <p>Assessor-informed support for funding and grant applications, grounded in 20 years of programme-management experience within Pobal.</p>
-              <a href="grant-applications.html" class="capability-card__link">Learn more</a>
-            </div>
-            <div class="capability-card">
-              <span class="capability-card__eyebrow">Capacity</span>
-              <h3>Organisational Development</h3>
-              <p>Support to strengthen organisational structures, systems and long-term sustainability.</p>
+              <p>Assessor-informed masterclasses, funding-readiness reviews and application support, grounded in 20 years of programme-management experience within Pobal.</p>
+              <a href="grant-applications.php" class="capability-card__link">Learn more about funding and grant applications</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Direction</span>
               <h3>Strategy &amp; Planning</h3>
               <p>Helping organisations develop practical, realistic strategic plans and priorities.</p>
-              <a href="services.html#strategy-planning" class="capability-card__link">Learn more</a>
+              <a href="services.php#strategy-planning" class="capability-card__link">Learn more about strategy and planning</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Growth</span>
               <h3>Capacity Building</h3>
               <p>Capacity-building support helps boards, teams and community organisations embed stronger governance, planning, funding readiness and delivery practices over time. It can combine workshops, practical tools, mentoring and implementation reviews so that learning is converted into sustained organisational capability.</p>
-              <a href="services.html#capacity-building" class="capability-card__link">Learn more</a>
+              <a href="services.php#capacity-building" class="capability-card__link">Learn more about capacity building</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Enterprise</span>
               <h3>Social &amp; Community Enterprise Support</h3>
               <p>Practical support for community organisations and social enterprises testing traded income, refining a paid offer or preparing for growth. Diagnostics and development support examine mission fit, buyer or commissioner demand, pricing, governance readiness, delivery capacity and social-impact evidence, helping organisations decide whether to stop, refine, pilot or progress.</p>
-              <a href="services.html#social-enterprise" class="capability-card__link">Learn more</a>
+              <a href="services.php#social-enterprise" class="capability-card__link">Learn more about social and community enterprise support</a>
             </div>
             <div class="capability-card">
               <span class="capability-card__eyebrow">Tailored</span>
               <h3>Bespoke Consultancy</h3>
               <p>Where an organisation’s needs do not fit a standard service, Nurture Impact can shape a proportionate response around the decision, challenge or outcome required. Support may involve a focused diagnostic, facilitated workshop, document review, short consultancy assignment or longer implementation pathway.</p>
-              <a href="services.html#bespoke" class="capability-card__link">Learn more about bespoke consultancy</a>
+              <a href="services.php#bespoke" class="capability-card__link">Learn more about bespoke consultancy</a>
             </div>
           </div>
         </div>
@@ -226,11 +174,11 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
               <li>Youth &amp; community development</li>
               <li>Team development</li>
             </ul>
-            <a href="events-workshops.html" class="intro__btn">See Events &amp; Workshops</a>
+            <a href="events-workshops.php" class="intro__btn">See Events &amp; Workshops</a>
           </div>
           <div class="training__gallery">
             <img src="assets/workshop_1.jpg" alt="Team taking part in a Nurture Impact training session">
-            <img src="assets/funding_app.png" alt="Participant completing a funding application exercise">
+            <img src="assets/funding_app.jpg" alt="Participant completing a funding application exercise">
             <img src="assets/growth_stages.jpg" alt="Illustration of staged organisational growth">
           </div>
         </div>
@@ -251,7 +199,7 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
           </div>
 
           <?php if (empty($latestProjects)): ?>
-            <p class="content-placeholder-note">Project write-ups are being prepared for publication. Check back soon, or see <a href="services.html">our services</a> in the meantime.</p>
+            <p class="content-placeholder-note">Project write-ups are being prepared for publication. Check back soon, or see <a href="services.php">our services</a> in the meantime.</p>
           <?php else: ?>
             <div class="card-grid">
               <?php foreach ($latestProjects as $project): ?>
@@ -457,62 +405,16 @@ $latestArticles = array_slice(ni_get_articles(true), 0, 3);
         </div>
       </section>
     
-      <!-- Contact section - backend functionality to be added -->
-      <section class="contact" id="contact">
-        <h2 class="contact__heading" tabindex="0">Want to get in touch?</h2>
-        <p class="contact__sub">Use the form below to get in touch with Nurture Impact</p>
-        <form id="contact-form" method="post" action="contact-handler.php">
-          <input type="hidden" name="contact_number">
-          <input type="hidden" name="source_page" value="Homepage">
-          <input type="text" placeholder="Enter your name" id="name"  name="from_name" aria-label="Enter your name" required>
-          <input type="email" placeholder="Enter your email" id="email" name="reply_to" aria-label="Enter your email" required>
-          <input type="text" placeholder="Organisation name (optional)" id="organisation" name="organisation" aria-label="Enter your organisation name">
-          <textarea cols="30" rows="10" placeholder="Enter your message" name="message" id="Message" aria-label="Enter your message" required></textarea>
-          <input type="submit" class="btn"  value="SEND MESSAGE">
-        </form>
-      </section>
+    <?php
+    $contactHeading = 'Want to get in touch?';
+    $contactSub = 'Use the form below to get in touch with Nurture Impact';
+    $contactSource = 'Homepage';
+    $contactPlaceholder = 'Enter your message';
+    $contactSubmit = 'SEND MESSAGE';
+    include __DIR__ . '/includes/partials/contact-form.php';
+    ?>
       <!-- End of contact section -->
     </main>
-  <!-- Footer section -->
-  <footer class="footer footer--expanded">
-    <div class="footer__content">
-      <div class="footer__brand">
-        <h3>Nurture Impact</h3>
-        <p>Youth &amp; Community Development Consultancy &bull; Training &amp; Governance &bull; Funding &amp; Grant Applications</p>
-      </div>
-
-      <div class="footer__nav">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.php">Projects</a></li>
-          <li><a href="insights.php">Insights</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__services">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="governance.html">Governance, Strategy &amp; Board Development</a></li>
-          <li><a href="grant-applications.html">Funding &amp; Grant Applications</a></li>
-          <li><a href="services.html#training">Training &amp; Workshops</a></li>
-          <li><a href="events-workshops.html">Events &amp; Workshops</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__contact">
-        <h4 style="color:#fff;opacity:.9;margin:0 0 10px;font-size:1rem;">Contact</h4>
-        <p><a href="mailto:info@nurtureimpact.ie">info@nurtureimpact.ie</a></p>
-        <p><a href="https://www.nurtureimpact.ie" target="_blank">www.nurtureimpact.ie</a></p>
-        <div class="footer__social">
-          <a href="https://www.linkedin.com/in/curtisalan?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener" aria-label="Nurture Impact on LinkedIn">LinkedIn</a>
-        </div>
-      </div>
-    </div>
-    <p class="footer__text">&copy; Nurture Impact 2026</p>
-  </footer>
-  <script src="assets/js/contact-form.js" defer></script>
+  <?php include __DIR__ . '/includes/partials/footer.php'; ?>
 </body>
 </html>

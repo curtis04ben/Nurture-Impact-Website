@@ -31,7 +31,7 @@ $articles = ni_get_articles(true);
     <section class="content-section content-section--light">
       <div class="content__wrapper">
         <?php if (empty($articles)): ?>
-          <p class="content-placeholder-note" style="margin-top:0;">
+          <p class="content-placeholder-note content-placeholder-note--flush">
             Articles are being prepared for publication. Follow Nurture Impact on <a href="https://www.linkedin.com/in/curtisalan?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a> for updates, or <a href="index.php#contact">get in touch</a> in the meantime.
           </p>
         <?php else: ?>

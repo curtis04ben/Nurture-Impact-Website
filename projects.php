@@ -31,8 +31,8 @@ $projects = ni_get_projects(true);
     <section class="content-section content-section--light">
       <div class="content__wrapper">
         <?php if (empty($projects)): ?>
-          <p class="content-placeholder-note" style="margin-top:0;">
-            Project write-ups are being prepared for publication. In the meantime, see <a href="services.html">our services</a> or <a href="index.php#contact">get in touch</a> to discuss your organisation's needs.
+          <p class="content-placeholder-note content-placeholder-note--flush">
+            Project write-ups are being prepared for publication. In the meantime, see <a href="services.php">our services</a> or <a href="index.php#contact">get in touch</a> to discuss your organisation's needs.
           </p>
         <?php else: ?>
           <div class="card-grid">

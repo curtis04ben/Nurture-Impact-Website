@@ -6,7 +6,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700|Great+Vibes:400,100,300,500,700' rel='stylesheet' type='text/css'>
   <title>About Nurture Impact | Alan Curtis, Youth &amp; Community Development Consultant</title>
   <meta name="description" content="Nurture Impact draws on over 30 years of experience across Ireland's Youth & Community Development sector, including 20 years of specialist experience within Pobal.">
-  <link rel="canonical" href="https://www.nurtureimpact.ie/about.html">
+  <link rel="canonical" href="https://www.nurtureimpact.ie/about.php">
   <meta property="og:title" content="About Nurture Impact">
   <meta property="og:description" content="Over 30 years of experience across the Youth & Community Development sector, including 20 years within Pobal.">
   <meta property="og:image" content="https://www.nurtureimpact.ie/assets/alan_img-removebg.png">
@@ -18,49 +18,7 @@
 </head>
 
 <body>
-  <!--Beginning of navigation section-->
-  <div class="nav-bar">
-      <!-- Logo + Title together on the left -->
-      <div class="nav-bar__left">
-          <a href="index.php" class="nav-bar-brand">
-              <img src="assets/main_img.png" alt="Nurture Impact Logo" class="nav-bar-brand__img">
-          </a>
-          <div class="nav-bar__title">
-              <h1>Nurture Impact</h1>
-          </div>
-      </div>
-
-      <!-- Desktop navigation links -->
-      <ul class="nav-bar__links">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.php">Projects</a></li>
-        <li><a href="insights.php">Insights</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <!-- Skip link (hidden until focused) -->
-      <a href="#intro" class="skip-to-main">skip to main content</a>
-  </div>
-    <div class="navigation">
-      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" aria-hidden="true">
-      <label for="navi-toggle" class="navigation__button">
-        <span class="navigation__icon">&nbsp;</span>
-      </label>
-      <div class="navigation__background">&nbsp;</div>
-      <nav class="navigation__nav">
-        <ul class="navigation__list">        
-          <li class="navigation__item"><a href="index.php" class="navigation__link">HOME</a></li>
-          <li class="navigation__item"><a href="services.html" class="navigation__link">SERVICES</a></li>
-          <li class="navigation__item"><a href="projects.php" class="navigation__link">PROJECTS</a></li>
-          <li class="navigation__item"><a href="insights.php" class="navigation__link">INSIGHTS</a></li>
-          <li class="navigation__item"><a href="about.html" class="navigation__link">ABOUT</a></li>
-          <li class="navigation__item"><a href="#contact" class="navigation__link">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
-    <!--End of navigation section-->
+  <?php $navContactHref = '#contact'; include __DIR__ . '/includes/partials/nav.php'; ?>
 
   <!-- Beginning of header section -->
   <header class="hero-header hero-header--about">
@@ -72,7 +30,7 @@
   </header>
   <!-- End of header section -->
 
-  <main>
+  <main id="main-content">
     <!-- About intro section -->
     <div class="intro__wrapper">
       <section class="profile-section" id="intro">
@@ -83,7 +41,7 @@
             </div>
           </div>
           <div class="profile__bio-col">
-            <h1 class="intro__headline">Meet Alan Curtis</h1>
+            <h2 class="intro__headline">Meet Alan Curtis</h2>
             <p class="intro__body">
               Alan has over 30 years of experience across Ireland's Youth &amp; Community Development sector, spanning a broad range of organisations, programmes and areas of community and youth development work.
             </p>
@@ -158,7 +116,7 @@
           </div>
         </div>
 
-        <p style="max-width:800px;margin:50px auto 0;text-align:center;opacity:0.9;font-size:1.05rem;line-height:1.7;">
+        <p class="experience__closing">
           This combination of broad sector experience, deep specialist Pobal knowledge, and practical consultancy and training experience is what allows Nurture Impact to support organisations from first strategy conversations through to funding and delivery.
         </p>
       </div>
@@ -244,8 +202,8 @@
         <h2 class="cta__headline">Ready to Strengthen Your Organisation?</h2>
         <p class="cta__text">Whether you're preparing a funding application or building board capacity, Nurture Impact can help.</p>
         <div class="cta__buttons">
-          <a href="grant-applications.html" class="why__cta-link">Funding &amp; Grant Applications</a>
-          <a href="governance.html" class="why__cta-link why__cta-link--secondary">Governance, Strategy &amp; Board Development</a>
+          <a href="grant-applications.php" class="why__cta-link">Funding &amp; Grant Applications</a>
+          <a href="governance.php" class="why__cta-link why__cta-link--secondary">Governance, Strategy &amp; Board Development</a>
         </div>
         <p class="cta__or">or</p>
         <a href="#contact" class="cta__contact-link">Get in touch directly</a>
@@ -253,63 +211,17 @@
     </section>
     <!-- End of CTA section -->
 
-    <!-- Contact section -->
-    <section class="contact" id="contact">
-      <h2 class="contact__heading" tabindex="0">Start a Conversation</h2>
-      <p class="contact__sub">Tell us about your organisation and training needs</p>
-      <form id="contact-form" method="post" action="contact-handler.php">
-        <input type="hidden" name="contact_number">
-          <input type="hidden" name="source_page" value="About page">
-        <input type="text" placeholder="Enter your name" id="name" name="from_name" aria-label="Enter your name" required>
-        <input type="email" placeholder="Enter your email" id="email" name="reply_to" aria-label="Enter your email" required>
-        <input type="text" placeholder="Organisation name (optional)" id="organisation" name="organisation" aria-label="Enter your organisation name">
-        <textarea cols="30" rows="10" placeholder="How can Nurture Impact help?" name="message" id="Message" aria-label="Enter your message" required></textarea>
-        <input type="submit" class="btn" value="SEND MESSAGE">
-      </form>
-    </section>
+    <?php
+    $contactHeading = 'Start a Conversation';
+    $contactSub = 'Tell us about your organisation and training needs';
+    $contactSource = 'About page';
+    $contactPlaceholder = 'How can Nurture Impact help?';
+    $contactSubmit = 'SEND MESSAGE';
+    include __DIR__ . '/includes/partials/contact-form.php';
+    ?>
     <!-- End of contact section -->
   </main>
 
-  <!-- Footer section -->
-  <footer class="footer footer--expanded">
-    <div class="footer__content">
-      <div class="footer__brand">
-        <h3>Nurture Impact</h3>
-        <p>Youth &amp; Community Development Consultancy &bull; Training &amp; Governance &bull; Funding &amp; Grant Applications</p>
-      </div>
-
-      <div class="footer__nav">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.php">Projects</a></li>
-          <li><a href="insights.php">Insights</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__services">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="governance.html">Governance, Strategy &amp; Board Development</a></li>
-          <li><a href="grant-applications.html">Funding &amp; Grant Applications</a></li>
-          <li><a href="services.html#training">Training &amp; Workshops</a></li>
-          <li><a href="events-workshops.html">Events &amp; Workshops</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__contact">
-        <h4 style="color:#fff;opacity:.9;margin:0 0 10px;font-size:1rem;">Contact</h4>
-        <p><a href="mailto:info@nurtureimpact.ie">info@nurtureimpact.ie</a></p>
-        <p><a href="https://www.nurtureimpact.ie" target="_blank">www.nurtureimpact.ie</a></p>
-        <div class="footer__social">
-          <a href="https://www.linkedin.com/in/curtisalan?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener" aria-label="Nurture Impact on LinkedIn">LinkedIn</a>
-        </div>
-      </div>
-    </div>
-    <p class="footer__text">&copy; Nurture Impact 2026</p>
-  </footer>
-  <script src="assets/js/contact-form.js" defer></script>
+  <?php include __DIR__ . '/includes/partials/footer.php'; ?>
 </body>
 </html>

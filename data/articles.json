@@ -5,10 +5,10 @@
     "date": "2026-01-10",
     "author": "Alan Curtis",
     "category": "Funding",
-    "featured_image": "assets/appraisal.png",
+    "featured_image": "assets/appraisal.jpg",
     "excerpt": "An example article entry showing how published insights will appear, including category tags, dates and a short excerpt.",
     "body": "This is placeholder body text for an example article.\n\nA real article would draw on Nurture Impact's direct experience to explain, in practical terms, what makes a funding application stand out during appraisal.\n\nUse the admin area to edit this entry, or add and publish new articles as they are written.",
-    "related_service": "grant-applications.html",
+    "related_service": "grant-applications.php",
     "published": false
   }
 ]

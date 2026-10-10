@@ -41,7 +41,7 @@ $canonicalUrl = 'https://www.nurtureimpact.ie/project.php?slug=' . urlencode($sl
         <h1>Project Not Found</h1>
         <p>This project may have been unpublished or the link may be incorrect.</p>
       </header>
-      <p style="text-align:center;margin:40px 0;"><a href="projects.php">&larr; Back to all projects</a></p>
+      <p class="back-link-row"><a href="projects.php">&larr; Back to all projects</a></p>
     <?php else: ?>
       <header class="article-header">
         <div class="article-header__meta">

@@ -3,11 +3,16 @@
 # shared hosting. If pretty URLs below don't work, confirm mod_rewrite
 # is on for the account (Blacknight support can confirm/enable this).
 
-# Serve the dynamic homepage by default (index.html is kept only as a
-# redirect for old bookmarks/links; see index.html itself).
-DirectoryIndex index.php index.html
+# Serve the dynamic homepage by default.
+DirectoryIndex index.php
 
 RewriteEngine On
+
+# Old .html addresses (bookmarks, search results, shared links) redirect
+# permanently to their .php replacements.
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^events\.html$ /events-workshops.php [R=301,L]
+RewriteRule ^(about|services|governance|grant-applications|events-workshops)\.html$ /$1.php [R=301,L]
 
 # Pretty article URLs: /insights/example-slug -> article.php?slug=example-slug
 RewriteRule ^insights/([a-zA-Z0-9\-]+)/?$ article.php?slug=$1 [L,QSA]

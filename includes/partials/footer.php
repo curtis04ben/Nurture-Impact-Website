@@ -9,23 +9,23 @@
         <h4>Explore</h4>
         <ul>
           <li><a href="index.php">Home</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="services.php">Services</a></li>
           <li><a href="projects.php">Projects</a></li>
           <li><a href="insights.php">Insights</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.php">About</a></li>
         </ul>
       </div>
       <div class="footer__services">
         <h4>Services</h4>
         <ul>
-          <li><a href="governance.html">Governance, Strategy &amp; Board Development</a></li>
-          <li><a href="grant-applications.html">Funding &amp; Grant Applications</a></li>
-          <li><a href="services.html#training">Training &amp; Workshops</a></li>
-          <li><a href="events-workshops.html">Events &amp; Workshops</a></li>
+          <li><a href="governance.php">Governance, Strategy &amp; Board Development</a></li>
+          <li><a href="grant-applications.php">Funding &amp; Grant Applications</a></li>
+          <li><a href="services.php#training">Training &amp; Workshops</a></li>
+          <li><a href="events-workshops.php">Events &amp; Workshops</a></li>
         </ul>
       </div>
       <div class="footer__contact">
-        <h4 style="color:#fff;opacity:.9;margin:0 0 10px;font-size:1rem;">Contact</h4>
+        <h4>Contact</h4>
         <p><a href="mailto:info@nurtureimpact.ie">info@nurtureimpact.ie</a></p>
         <p><a href="https://www.nurtureimpact.ie" target="_blank">www.nurtureimpact.ie</a></p>
         <div class="footer__social">

@@ -12,13 +12,11 @@ web development.
 ```
 /
 ├── index.php                  Homepage (dynamic: shows latest published projects & articles)
-├── index.html                  Old URL; redirects to index.php
-├── about.html                   About Alan / Nurture Impact
-├── services.html                 All services overview
-├── governance.html                Governance, Strategy & Board Development
-├── grant-applications.html         Funding & Grant Applications
-├── events-workshops.html            Events & Workshops
-├── events.html                       Old URL; redirects to events-workshops.html
+├── about.php                   About Alan / Nurture Impact
+├── services.php                 All services overview
+├── governance.php                Governance, Strategy & Board Development
+├── grant-applications.php         Funding & Grant Applications
+├── events-workshops.php            Events & Workshops
 ├── projects.php                       Projects list (dynamic, reads /data/projects.json)
 ├── project.php                         Single project page (?slug=...)
 ├── insights.php                         Insights/Articles list (dynamic, reads /data/articles.json)
@@ -27,11 +25,14 @@ web development.
 ├── styles.css                              One shared stylesheet for the whole site
 ├── favicon.ico, assets/favicon-*.png        Browser tab icons
 ├── assets/js/contact-form.js                 Contact form AJAX + success/error banner
-├── .htaccess                                  Pretty URLs + security rules (see below)
+├── .htaccess                                  Pretty URLs, old .html redirects, security rules
 ├── includes/
 │   ├── content.php                             Read/write the JSON content store
 │   ├── mailer.php                               Contact-form email building + sending
-│   └── partials/nav.php, footer.php              Shared header/footer for the .php pages
+│   └── partials/                                 Shared building blocks used by every page:
+│       ├── nav.php                                Site header + mobile menu
+│       ├── footer.php                             Site footer
+│       └── contact-form.php                       Contact form (wording set per page)
 ├── data/
 │   ├── projects.json                              Source of truth for Projects
 │   ├── articles.json                               Source of truth for Insights
@@ -43,11 +44,19 @@ web development.
 └── assets/                                             Images, incl. assets/uploads/ for admin-uploaded images
 ```
 
-Most of the site is still plain HTML/CSS: Home, About, Services, Governance
-and Grant Applications are readable files you can edit directly. Projects,
-Insights and the homepage's "latest content" sections are PHP-powered
-because they need to update automatically as content is published, without
-anyone editing HTML by hand.
+Every page is a `.php` file, but most of each one is ordinary HTML you can
+edit directly. The PHP is mainly there for two things:
+
+- **Shared pieces.** The header, footer and contact form live once in
+  `includes/partials/` and every page pulls them in, so a change to the
+  menu or footer is a single edit. Each page sets its own contact-form
+  heading and wording just above the line that includes the form.
+- **Live content.** Projects, Insights and the homepage's "latest content"
+  sections update automatically as content is published in `/admin`.
+
+The pages used to be `.html` files. `.htaccess` permanently redirects the
+old `.html` addresses to the new ones, so old links and search results
+keep working.
 
 ---
 
@@ -61,8 +70,7 @@ anyone editing HTML by hand.
 
 If any of these change again in future, this is where they're defined:
 - Email: `backend/config.php` → `NI_CONTACT_EMAIL`, plus the visible
-  `mailto:` links in `includes/partials/footer.php` and each page's own
-  footer/about section.
+  `mailto:` links in `includes/partials/footer.php` and the About page.
 - LinkedIn: search the project for `linkedin.com/in/curtisalan`.
 
 ---
@@ -104,8 +112,8 @@ Then open `http://localhost:8000/` (serves `index.php` automatically) and
 refresh the page to see the change.
 
 The built-in server ignores `.htaccess`, so the pretty URLs
-(`/insights/your-slug`) and the "deny direct access" rules don't apply in
-this mode. The `?slug=...` links the site itself uses work fine.
+(`/insights/your-slug`), the old `.html` redirects and the "deny direct
+access" rules don't apply in this mode. The `?slug=...` links the site itself uses work fine.
 
 ### 4.2 Full Apache preview (matches production)
 
@@ -332,3 +340,10 @@ Two exact-duplicate crops of the same stock photo (`workshop_1.png`,
 removed since nothing referenced them after the rebalance. Every
 remaining asset in `/assets` is referenced from at least one page or
 content entry.
+
+Photos are stored as compressed JPEGs (quality around 80, metadata
+stripped), which keeps the whole `/assets` folder at about 1MB. Only
+images that need a transparent background (the logo `main_img.png`,
+`alan_img-removebg.png` and the favicons) are PNGs. When adding a new
+photo, save it as a JPEG around 1200px wide or less; the admin area
+accepts JPG, PNG, WEBP and GIF uploads up to 5MB.

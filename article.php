@@ -47,7 +47,7 @@ $phpUrl = 'https://www.nurtureimpact.ie/article.php?slug=' . urlencode($slug);
         <h1>Article Not Found</h1>
         <p>This article may have been unpublished or the link may be incorrect.</p>
       </header>
-      <p style="text-align:center;margin:40px 0;"><a href="insights.php">&larr; Back to all insights</a></p>
+      <p class="back-link-row"><a href="insights.php">&larr; Back to all insights</a></p>
     <?php else: ?>
       <header class="article-header">
         <div class="article-header__meta">

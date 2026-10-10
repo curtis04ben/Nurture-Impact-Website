@@ -136,7 +136,7 @@ $pageHeading = $existing ? 'Edit Article' : 'New Article';
         <p class="admin-hint">Leave a blank line between paragraphs.</p>
 
         <label for="related_service">Related service link (optional)</label>
-        <input type="text" id="related_service" name="related_service" value="<?php echo e($relatedService); ?>" placeholder="e.g. grant-applications.html">
+        <input type="text" id="related_service" name="related_service" value="<?php echo e($relatedService); ?>" placeholder="e.g. grant-applications.php">
 
         <label style="display:flex;align-items:center;gap:10px;margin-top:20px;">
           <input type="checkbox" name="published" style="width:auto;" <?php echo $published ? 'checked' : ''; ?>>

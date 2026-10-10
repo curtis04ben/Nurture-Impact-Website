@@ -27,26 +27,6 @@ ul, li {
   margin: 7px;
 }
 
-.heading {
-  text-align: center;
-  font-weight: 400;
-}
-
-.heading2left {
-  text-align: left;
-  font-weight: 300;
-}
-
-.heading2centre {
-  text-align: center;
-  font-weight: 400;
-}
-
-.heading3left {
-  text-align: left;
-  font-weight: 400;
-}
-
 /* ----------------------------------------
    NAVIGATION
    ---------------------------------------- */
@@ -86,7 +66,8 @@ ul, li {
   display: block;
 }
 
-.nav-bar__title h1 {
+.nav-bar__title-text {
+  display: block;
   margin: 0;
   font-family: 'Roboto';
   font-size: 1.8rem;
@@ -283,7 +264,7 @@ ul, li {
 
 /* Navigation responsive */
 @media (max-width: 768px) {
-  .nav-bar__title h1 {
+  .nav-bar__title-text {
     font-size: 1.4rem;
   }
 
@@ -329,21 +310,7 @@ ul, li {
 
 .hero-governance {
   position: relative;
-  background-image: url("assets/governance.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-}
-
-.hero-grant {
-  position: relative;
-  background-image: url("assets/grant.png");
+  background-image: url("assets/governance.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -437,15 +404,6 @@ ul, li {
 
 .btn:hover {
   cursor: pointer;
-}
-
-.btn-center {
-  margin: 0 calc(50% - 100px) 0;
-}
-
-.btn__link {
-  margin: 20px auto;
-  text-decoration: none;
 }
 
 .btn--primary {
@@ -547,17 +505,6 @@ a.intro__btn:visited,
 a.intro__btn:hover,
 a.intro__btn:active {
   text-decoration: none;
-}
-
-.intro__btn--secondary {
-  background-color: transparent;
-  color: #1a4131;
-  border: 2px solid #1a4131;
-}
-
-.intro__btn--secondary:hover {
-  background-color: #1a4131;
-  color: #fff;
 }
 
 .intro__buttons {
@@ -924,10 +871,6 @@ a.intro__btn:active {
   line-height: 1.6;
 }
 
-.why__cta {
-  margin-top: 20px;
-}
-
 .why__cta-link {
   display: inline-block;
   background-color: #1a4131;
@@ -1052,108 +995,6 @@ a.intro__btn:active {
     grid-column: 1 / -1;
     max-width: 50%;
     margin: 0 auto;
-  }
-}
-
-/* ----------------------------------------
-   GOVERNANCE CARDS
-   ---------------------------------------- */
-
-.governance__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.governance__card {
-  background-color: rgb(255, 255, 255);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.governance__card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-.governance__card-number {
-  background-color: #1a4131;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 15px 20px;
-  text-align: center;
-}
-
-.governance__card-content {
-  padding: 30px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.governance__card-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-  color: #2b2b2b;
-  line-height: 1.3;
-}
-
-.governance__card-purpose {
-  font-size: 1.1rem;
-  font-style: italic;
-  opacity: 0.9;
-  margin-bottom: 20px;
-  line-height: 1.5;
-  color: #2f2f2f;
-}
-
-.governance__card-details {
-  margin-bottom: 20px;
-  flex-grow: 1;
-  color: #313131;
-}
-
-.governance__card-details h4 {
-  font-size: 1rem;
-  font-weight: 500;
-  margin: 20px 0 10px;
-  color: #203b2a;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.governance__card-details ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.governance__card-details li {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 6px;
-  opacity: 0.9;
-}
-
-.governance__card .events__btn {
-  align-self: flex-start;
-  margin-top: auto;
-}
-
-/* Governance responsive */
-@media (min-width: 900px) {
-  .governance__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .governance__card-number {
-    font-size: 1.8rem;
   }
 }
 
@@ -1772,10 +1613,6 @@ a.intro__btn:active {
   color: #333;
 }
 
-.steps__cta {
-  margin-top: 40px;
-}
-
 /* Steps responsive */
 @media (min-width: 768px) {
   .steps__grid {
@@ -1787,31 +1624,6 @@ a.intro__btn:active {
   .steps__grid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-/* ----------------------------------------
-   ABOUT PAGE - INTRO
-   ---------------------------------------- */
-
-.about-intro {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-intro__text {
-  padding: 20px 0;
-}
-
-.about-intro__text .intro__headline {
-  margin-bottom: 2rem;
-}
-
-.about-intro__text .intro__body {
-  text-align: left;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ----------------------------------------
@@ -2161,39 +1973,6 @@ textarea {
 
 }
 
-/* ----------------------------------------
-   PROCESS SECTION (if used)
-   ---------------------------------------- */
-
-.process {
-  background-color: #fff;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
-.process__heading {
-  text-align: center;
-  font-weight: 300;
-}
-
-.process-wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0px 20px 0px;
-  text-align: center;
-}
-
-.process__image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
 /* ========================================
    SITE EXPANSION: SERVICES / PROJECTS /
    INSIGHTS / PROFILE / EVENTS-WORKSHOPS
@@ -2260,7 +2039,7 @@ textarea {
 }
 
 /* ----------------------------------------
-   SERVICE CAPABILITY CARDS (services.html
+   SERVICE CAPABILITY CARDS (services.php
    + homepage capability overview)
    ---------------------------------------- */
 
@@ -2356,9 +2135,23 @@ textarea {
   }
 }
 
+/* Three cards per row on wide screens. A 6-column track with each card
+   spanning 2 lets a short final row sit centred instead of left-aligned. */
 @media (min-width: 1100px) {
   .capability-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .capability-card {
+    grid-column: span 2;
+  }
+
+  .capability-card:nth-child(3n+1):nth-last-child(2) {
+    grid-column: 2 / span 2;
+  }
+
+  .capability-card:nth-child(3n+1):last-child {
+    grid-column: 3 / span 2;
   }
 }
 
@@ -2592,17 +2385,25 @@ textarea {
   font-size: 0.95rem;
 }
 
-.content-card--placeholder {
-  border-style: dashed;
-  background-color: #fbfcfb;
-}
-
 .content-placeholder-note {
   margin-top: 40px;
   text-align: center;
   color: #666;
   font-size: 0.95rem;
   font-style: italic;
+}
+
+.content-placeholder-note--flush {
+  margin-top: 0;
+}
+
+.content-placeholder-note--on-dark {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.back-link-row {
+  text-align: center;
+  margin: 40px 0;
 }
 
 /* ----------------------------------------
@@ -2852,6 +2653,7 @@ textarea {
 
 .footer__services h4,
 .footer__nav h4,
+.footer__contact h4,
 .footer__social h4 {
   color: #fff;
   font-size: 1rem;
@@ -2897,32 +2699,6 @@ textarea {
   }
 }
 
-.footer__legal {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  font-size: 0.85rem;
-}
-
-.footer__legal a {
-  color: rgba(255,255,255,0.6);
-  text-decoration: none;
-}
-
-.footer__legal a:hover {
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  .footer__legal {
-    justify-content: flex-end;
-  }
-}
-
 /* ----------------------------------------
    SERVICES PAGE: ALTERNATING SECTIONS
    ---------------------------------------- */
@@ -2960,7 +2736,24 @@ textarea {
 .service-note {
   font-size: 0.98rem;
   color: #666;
-  font-style: italic;
+}
+
+.service-note a {
+  color: #1a4131;
+  font-weight: 600;
+}
+
+.service-anchor-offset--marker {
+  display: block;
+}
+
+.experience__closing {
+  max-width: 800px;
+  margin: 50px auto 0;
+  text-align: center;
+  opacity: 0.9;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 /* ----------------------------------------
