@@ -2,6 +2,17 @@
 require_once __DIR__ . '/../../backend/config.php';
 require_once __DIR__ . '/../../includes/content.php';
 
+// Opened as /admin (no trailing slash): redirect to /admin/ first, otherwise
+// the relative redirects and links below (setup.php, login.php, admin.css)
+// resolve against the site root and 404.
+$niAdminDir = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '')), '/');
+$niRequestPath = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH);
+if ($niAdminDir !== '' && $niRequestPath === $niAdminDir) {
+    $query = $_SERVER['QUERY_STRING'] ?? '';
+    header('Location: ' . $niAdminDir . '/' . ($query !== '' ? '?' . $query : ''), true, 301);
+    exit;
+}
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
